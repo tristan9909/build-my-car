@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Build My Car — Build Smarter</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:#0b0d10;color:#f5f7fa}
+.wrap{max-width:920px;margin:auto;padding:28px 18px 60px}.hero{text-align:center;padding:55px 10px 30px}
+.badge{display:inline-block;border:1px solid #333;padding:7px 12px;border-radius:999px;font-size:12px;color:#b9c0ca}
+h1{font-size:clamp(40px,8vw,72px);line-height:.98;margin:18px 0 14px}h1 span{color:#8fd3ff}
+.sub{font-size:18px;line-height:1.55;color:#b9c0ca;max-width:650px;margin:0 auto 26px}
+.btn{display:inline-block;background:#fff;color:#080a0d;text-decoration:none;font-weight:800;padding:15px 22px;border-radius:12px;margin:5px}
+.btn.alt{background:#171b21;color:#fff;border:1px solid #303641}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:35px 0}
+.card{background:#12161b;border:1px solid #262c34;border-radius:16px;padding:20px}.card b{display:block;margin-bottom:7px}.card p{color:#aeb6c1;line-height:1.45;margin:0}
+.test{background:#10151b;border:1px solid #2d3540;border-radius:18px;padding:24px;margin-top:20px}
+ol{color:#c5ccd5;line-height:1.8}.small{font-size:13px;color:#858f9c;line-height:1.5}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+</style>
+
+<!-- Build My Car Analytics (GA4) -->
+<script>
+  const BMC_GA4_ID = 'G-XXXXXXXXXX'; // Replace with your Google Analytics Measurement ID
+  if (BMC_GA4_ID !== 'G-XXXXXXXXXX') {
+    const s=document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id='+BMC_GA4_ID; document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[]; function gtag(){dataLayer.push(arguments)} window.gtag=gtag;
+    gtag('js',new Date()); gtag('config',BMC_GA4_ID);
+  }
+  function bmcEvent(name, params={}) {
+    if (window.gtag) gtag('event',name,params);
+  }
+  bmcEvent('landing_page_view',{page_name:'landing'});
+</script>
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+  <div class="badge">FREE MVP TEST • 2015 LEXUS IS350 F SPORT RWD</div>
+  <h1>Stop guessing.<br><span>Build your car.</span></h1>
+  <p class="sub">Choose your car, goal, and budget. Build My Car turns that into a staged parts plan with fitment confidence, priorities, and estimated cost.</p>
+  <a class="btn" href="build_my_car_mvp_v5_tracking.html" onclick="bmcEvent('mvp_cta_click',{source:'landing_page'});">Build My Car Free →</a>
+  <a class="btn alt" href="#test">How the test works</a>
+</section>
+
+<section class="grid">
+  <div class="card"><b>🎯 Goal-based</b><p>Daily, sound, handling, power, show, or track direction.</p></div>
+  <div class="card"><b>💰 Budget-aware</b><p>See what fits your budget before you start buying parts.</p></div>
+  <div class="card"><b>🔎 Fitment-conscious</b><p>Compatible and “verify” recommendations are separated instead of pretending every setup fits.</p></div>
+</section>
+
+<section class="test" id="test">
+<h2>You're testing the early version.</h2>
+<ol>
+<li>Select the <b>2015 IS350 F SPORT RWD</b>.</li>
+<li>Pick a goal and budget.</li>
+<li>Generate your build.</li>
+<li>Look through the recommended parts and the reasons behind them.</li>
+<li>Send one piece of feedback: <b>What would make this more useful for your car?</b></li>
+</ol>
+<p class="small">This is an early product test. Product availability, pricing, affiliate status, and some aftermarket fitment still require verification before purchase.</p>
+</section>
+</div>
+</body>
+</html>
